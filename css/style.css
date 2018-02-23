@@ -23,12 +23,14 @@ body {
   background-color: white;
 }
 
+#palette {
+  margin-left: 5px;
+}
+
 div#palette div {
-  border: 1px solid black;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* display: table-cell; */
   float: left;
   margin-right: 11px;
   margin-top: 8px;
