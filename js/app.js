@@ -25,6 +25,17 @@ const colors = ["AliceBlue",
 "Cornsilk",
 "Crimson",
 "Cyan",
+"DarkBlue",
+"DarkCyan",
+"DarkGoldenRod",
+"DarkGray",
+"DarkGreen",
+"DarkGrey",
+"DarkKhaki",
+"DarkMagenta",
+"DarkOliveGreen",
+"DarkOrange",
+"DarkOrchid",
 ]
 
 board.addEventListener('click', changeColor);
