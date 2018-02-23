@@ -68,15 +68,7 @@ function selectColor(e) {
 }
 
 function changeColor(e) {
-    // colors = {'squareOne': 'red', 'squareTwo': 'blue', 'squareThree': 'green'}
     let target = e.target || e.srcElement;
-    console.log("clicked");
-
-    console.log(e.target, e.srcElement);
-
-    // target.style.backgroundColor = colors[target.id];
-    // target.style.backgroundColor = "red";
-    // target.classList.toggle("red");
     target.setAttribute('style', 'background-color: ' + currentColor);
     return false;
 }
