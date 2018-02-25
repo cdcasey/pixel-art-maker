@@ -69,9 +69,6 @@ colors.forEach(color => {
 
 function selectColor(e) {
     let target = e.target || e.srcElement;
-    console.log("clicked");
-
-    console.log(target.id);
     currentIndicatedColor.setAttribute('style', 'background-color: ' + target.id);
     currentColor = target.id;
 }
