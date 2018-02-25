@@ -4,6 +4,14 @@ let palette = document.querySelector('#palette');
 let currentIndicatedColor = document.querySelector('#current');
 let currentColor = null;
 
+let mouseDown = false;
+document.body.onmousedown = function() {
+    mouseDown = true;
+}
+document.body.onmouseup = function() {
+  mouseDown = false;
+}
+
 const colors = ["AliceBlue",
 "AntiqueWhite",
 "Aqua",
@@ -38,7 +46,8 @@ const colors = ["AliceBlue",
 "DarkOrchid",
 ]
 
-board.addEventListener('click', changeColor);
+// board.addEventListener('click', changeColor);
+board.addEventListener('mouseover', changeColor);
 palette.addEventListener('click',  selectColor);
 
 for (let i = 0; i < 42; i++) {
@@ -68,8 +77,10 @@ function selectColor(e) {
 }
 
 function changeColor(e) {
-    let target = e.target || e.srcElement;
-    target.setAttribute('style', 'background-color: ' + currentColor);
-    return false;
+    if (mouseDown) {
+        let target = e.target || e.srcElement;
+        target.setAttribute('style', 'background-color: ' + currentColor);
+        return false;
+    }
 }
 
